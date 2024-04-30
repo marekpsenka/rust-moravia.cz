@@ -5,14 +5,52 @@
 {% set next_event = load_data(path="data/next_event.json") %}
 {% set past_events = load_data(path="data/past_events.json") %}
 
-<h1 class="title">
-  Rust Moravia
-</h1>
-
-<ul class="list-group list-group-flush">
-  {% for past_event in past_events %}
-  <li class="list-group-item">{{ past_event.name }}</li>
-  {% endfor %}
-</ul>
+<div class="row my-4">
+  <div class="col-sm-12 col-md-4 mx-auto text-center">
+    <h1 class="title">
+    Rust Moravia
+    </h1>
+  </div>
+</div>
+<div class="row mb-4">
+  <div class="col-sm-12 col-md-4 mx-auto text-center">
+    <div class="card" class="m-4">
+      <div class="card-header">
+        <h4>Next Event</h4>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">
+          <a href="{{ next_event.link }}">{{ next_event.name }}</a>
+        </h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">
+          <span class="material-symbols-outlined inline-icon">
+          calendar_clock
+          </span>
+          {{ next_event.date | date(format="%d.%m.%Y %H:%M") }}
+          <span class="material-symbols-outlined inline-icon">
+          location_on
+          </span>
+          {{ next_event.city }}
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mb-4">
+  <div class="col-sm-12 col-md-4 mx-auto text-center">
+    <div class="card" class="m-4">
+      <div class="card-header">
+        <h4>Past Events</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% for past_event in past_events %}
+          <li class="list-group-item">{{ past_event.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock content %}

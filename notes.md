@@ -54,3 +54,29 @@ Meta tags for social networks and modern chat tools are responsible for automati
 pages where a user shares the URL of your website.
 
 [Open Graph Meta tags validator](https://metatags.io/)
+
+## Bootstrap Breakpoints
+
+Breakpoints are customizable widths that determine how your responsive layout behaves across device
+or viewport sizes in Bootstrap
+
+Bootstrap includes six default breakpoints, sometimes referred to as grid tiers, for building
+responsively. These breakpoints can be customized if you’re using our source Sass files.
+
+### Media Queries
+
+allow you to apply CSS styles depending on a device's media type.
+
+[Using media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+
+Bootstrap uses media queries in its CSS stylesheets.  These media queries specify conditions based
+on the viewport width.  For example, a media query might look like
+
+```css
+@media (min-width: 768px) { ... styles ... }
+```
+
+This means the styles within the curly braces will only be applied if the viewport width
+is at least 768px.
+
+ Bootstrap's pre-defined breakpoints correspond to these media query conditions.

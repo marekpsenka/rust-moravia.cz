@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% set next_event = load_data(path="data/next_event.json") %}
+{% set past_events = load_data(path="data/past_events.json") %}
+
 <h1 class="title">
   Rust Moravia
 </h1>
+
+<ul class="list-group list-group-flush">
+  {% for past_event in past_events %}
+  <li class="list-group-item">{{ past_event.name }}</li>
+  {% endfor %}
+</ul>
+
 {% endblock content %}

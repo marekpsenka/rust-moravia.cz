@@ -23,13 +23,11 @@
           <a href="{{ next_event.link }}">{{ next_event.name }}</a>
         </h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">
-          <span class="material-symbols-outlined inline-icon">
-          calendar_clock
-          </span>
-          {{ next_event.date | date(format="%d.%m.%Y %H:%M") }}
-          <span class="material-symbols-outlined inline-icon">
-          location_on
-          </span>
+          <i class="bi-calendar-event"></i>
+          {{ next_event.date | date(format="%d.%m.%Y") }}
+          <i class="bi-clock ms-1"></i>
+          {{ next_event.date | date(format="%H:%M") }}
+          <i class="bi-geo-alt ms-1"></i>
           {{ next_event.city }}
         </h6>
       </div>
@@ -52,5 +50,14 @@
     </div>
   </div>
 </div>
-
+<footer>
+  <div class="row text-center">
+      <div class="col-md-4 mx-auto align-items-center my-4 py-3 border-top">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+          <i class="bi-bootstrap"></i>
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+      </div>
+  </div>
+</footer>
 {% endblock content %}

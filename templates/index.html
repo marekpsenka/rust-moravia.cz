@@ -5,15 +5,21 @@
 {% set next_event = load_data(path="data/next_event.json") %}
 {% set past_events = load_data(path="data/past_events.json") %}
 
-<div class="row my-4">
-  <div class="col-sm-12 col-md-4 mx-auto text-center">
-    <h1 class="title">
-    Rust Moravia
-    </h1>
+<header>
+  <div class="row my-4">
+    <div class="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center border-bottom">
+      <h1 class="title">
+      Rust Moravia
+      </h1>
+      <p class="lead">
+        <!-- TODO: Link to meetup.com here! -->
+        Group meeting in Olomouc, Zlín and other Moravian cities. Join us for the next event!
+      </p>
+    </div>
   </div>
-</div>
+</header>
 <div class="row mb-4">
-  <div class="col-sm-12 col-md-4 mx-auto text-center">
+  <div class="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center">
     <div class="card" class="m-4">
       <div class="card-header">
         <h4>Next Event</h4>
@@ -35,7 +41,7 @@
   </div>
 </div>
 <div class="row mb-4">
-  <div class="col-sm-12 col-md-4 mx-auto text-center">
+  <div class="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center">
     <div class="card" class="m-4">
       <div class="card-header">
         <h4>Past Events</h4>
@@ -43,7 +49,7 @@
       <div class="card-body">
         <ul class="list-group list-group-flush">
           {% for past_event in past_events %}
-          <li class="list-group-item">{{ past_event.name }}</li>
+          <li class="list-group-item"><a href="#">{{ past_event.name }}</a></li>
           {% endfor %}
         </ul>
       </div>
@@ -52,11 +58,21 @@
 </div>
 <footer>
   <div class="row text-center">
-      <div class="col-md-4 mx-auto align-items-center my-4 py-3 border-top">
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-          <i class="bi-bootstrap"></i>
-        </a>
-        <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
+      <div class="col-10 col-sm-8 col-md-6 col-lg-4 mx-auto align-items-center mb-4 py-3 border-top">
+        <p class="text-body-secondary text-decoration-none lh-1">
+          Powered by
+          <a href="https://getbootstrap.com/" class="text-body-secondary text-decoration-none">
+            <i class="bi-bootstrap"></i>
+          </a>,
+          <a href="https://github.com/marekpsenka/rust-moravia.cz" class="text-body-secondary text-decoration-none">
+            <i class="bi-github"></i>
+          </a>
+          and <a href="https://getzola.com" class="text-body-secondary text-decoration-none">Zola</a>.
+          Built by
+          <a href="https://github.com/marekpsenka" class="text-body-secondary text-decoration-none">marekpsenka</a>.
+          Domain provided by
+          <a href="https://edhouse.cz/en" class="text-body-secondary text-decoration-none">edhouse</a>.
+        </p>
       </div>
   </div>
 </footer>

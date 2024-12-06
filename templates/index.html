@@ -2,7 +2,7 @@
 
 {% block content %}
 
-{% set next_event = load_data(path="data/next_event.json") %}
+{% set next_event = load_data(path="data/next_event.json", required=false) %}
 {% set past_events = load_data(path="data/past_events.json") %}
 
 <header>
@@ -28,6 +28,7 @@
         <h4>Next Event</h4>
       </div>
       <div class="card-body">
+        {% if next_event %}
         <h5 class="card-title">
           <a href="{{ next_event.link }}">{{ next_event.name }}</a>
         </h5>
@@ -39,6 +40,9 @@
           <i class="bi-geo-alt ms-1"></i>
           {{ next_event.city }}
         </h6>
+        {% else %}
+          ... will be scheduled soon!
+        {% endif %}
       </div>
     </div>
   </div>
@@ -49,7 +53,7 @@
       <div class="card-header">
         <h4>Past Events</h4>
       </div>
-      <div class="card-body">
+      <div class="card-body p-0">
         <ul class="list-group list-group-flush">
           {% for past_event in past_events %}
           <li class="list-group-item"><a href="{{ past_event.link }}">{{ past_event.name }}</a></li>

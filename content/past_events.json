@@ -1,0 +1,20 @@
+[
+  {
+    "name": "3. Rust Moravia Meetup (Real Embedded Rust)",
+    "link": "https://www.meetup.com/rust-moravia/events/306377283",
+    "date": "2025-04-08T17:30:00+01:00",
+    "city": "Olomouc"
+  },
+  {
+    "name": "Rust Moravia Meetup (December 2024)",
+    "link": "https://www.meetup.com/rust-moravia/events/304075150",
+    "date": "2024-12-05T17:00:00+02:00",
+    "city": "Zlín"
+  },
+  {
+    "name": "Rust Moravia Meetup (September 2024)",
+    "link": "https://www.meetup.com/rust-moravia/events/301360936/",
+    "date": "2024-09-18T17:30:00+02:00",
+    "city": "Olomouc"
+  }
+]

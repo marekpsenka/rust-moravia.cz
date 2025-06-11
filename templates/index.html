@@ -2,8 +2,8 @@
 
 {% block content %}
 
-{% set next_event = load_data(path="data/next_event.json", required=false) %}
-{% set past_events = load_data(path="data/past_events.json") %}
+{% set next_event = load_data(path="content/next_event.json", required=false) %}
+{% set past_events = load_data(path="content/past_events.json") %}
 
 <header>
   <div class="row my-4">
@@ -17,6 +17,9 @@
       <p class="lead">
         Group meeting in Olomouc, Zlín and other Moravian cities. 
         <a href="https://www.meetup.com/rust-moravia/">Join us</a> for the next event!
+      </p>
+      <p>
+        Part of the larger <a href="https://rustlang.cz">czech Rust community</a>.
       </p>
     </div>
   </div>
@@ -41,7 +44,7 @@
           {{ next_event.city }}
         </h6>
         {% else %}
-          ... will be scheduled soon!
+          <span class="text-body-secondary">... will be scheduled soon!</span>
         {% endif %}
       </div>
     </div>
@@ -79,6 +82,9 @@
           <a href="https://github.com/marekpsenka" class="text-body-secondary text-decoration-none">marekpsenka</a>.
           Domain provided by
           <a href="https://edhouse.eu/en" class="text-body-secondary text-decoration-none">edhouse</a>.
+          <a href="https://rustacean.net/" class="text-body-secondary text-decoration-none">Ferris</a>
+          mascot adapted by
+          <a href="https://www.instagram.com/klaram.art/" class="text-body-secondary text-decoration-none">klaram.art</a>.
         </p>
       </div>
   </div>
